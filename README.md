@@ -69,9 +69,8 @@ Contains structured front matter and official university pages:
   Add glossary terms, abbreviations, or technical definitions here.
 
 
-## 📦 Compilation Notes
+## 📦 Compilation Note
 
-➤ Recommended to compile using **XeLaTeX** for best font and language support (especially for Persian/Unicode text).
-To compile the TeX files into a PDF, use the make command. This process automatically handles multiple steps: it runs Biber (for managing bibliography with biblatex), Xindy (for generating two glossaries), and XeLaTeX (to produce the final PDF). The build process runs as many times as needed to resolve all cross-references correctly.
+➤ compile using **XeLaTeX**.
 
 🙏 **If you found this thesis example helpful, please consider giving the repository a ⭐ to support the project.**
