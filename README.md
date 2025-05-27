@@ -16,8 +16,6 @@ Contains the bibliography file:
 
 * `Ref.bib`: Stores all your citation entries. Add your references here using BibTeX format.
 
----
-
 ### 📁 **Chapters**
 
 Includes the main body content of your thesis, organized by topic:
@@ -36,8 +34,6 @@ Includes the main body content of your thesis, organized by topic:
 \include{chapters/pre-intro}
 ```
 
----
-
 ### 📁 **Figures**
 
 Place all your figures and images here. Subfolders are supported.
@@ -47,8 +43,6 @@ Place all your figures and images here. Subfolders are supported.
 ```latex
 \mysubfig{figures/Subfolder/your-figure.pdf}{Your image caption}
 ```
-
----
 
 ### 📁 **STR-Files**
 
@@ -63,10 +57,6 @@ Contains structured front matter and official university pages:
 * `TASVIR-en.tex`: Insert the English cover page with the green background.
 * `TASVIR-fa.tex`: Insert the Persian cover page with the green background.
 
-⚠️ *Most users won't need to modify the TASVIR files unless required for submission or printing.*
-
----
-
 ## 📄 Main LaTeX Files
 
 * **`Mohammad.tex`**
@@ -78,13 +68,10 @@ Contains structured front matter and official university pages:
 * **`glossaries.tex`**
   Add glossary terms, abbreviations, or technical definitions here.
 
----
 
 ## 📦 Compilation Notes
 
 ➤ Recommended to compile using **XeLaTeX** for best font and language support (especially for Persian/Unicode text).
-You can compile via TeX editors like **TeXstudio**, **Overleaf**, or the command line.
-
----
+To compile the TeX files into a PDF, use the make command. This process automatically handles multiple steps: it runs Biber (for managing bibliography with biblatex), Xindy (for generating two glossaries), and XeLaTeX (to produce the final PDF). The build process runs as many times as needed to resolve all cross-references correctly.
 
 🙏 **If you found this thesis example helpful, please consider giving the repository a ⭐ to support the project.**
