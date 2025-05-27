@@ -8,8 +8,6 @@ A XeLaTeX-based thesis prepared according to the official formatting guidelines 
 
 This project is organized into several folders and key files as follows:
 
----
-
 ### 📁 **Bibs**
 
 Contains the bibliography file:
