@@ -30,22 +30,20 @@ This template is organized into several directories and files as follows:
   Store all your image files here. Subfolders are supported. To include a figure in your document, use:
 
   ```latex
-  \mysubfig{figures/your-file.pdf}{Your image caption}
+  \mysubfig{figures/Subfolders/your-file.pdf}{Your image caption}
   ```
 
 * **STR-Files**
   Contains structured template files for front matter and official pages:
 
-  * `abstract-en.tex`: Abstract in English
-  * `abstract-fa.tex`: Abstract in Persian
-  * `acknowledgements.tex`
-  * `submission-en.tex`: Score and signatures page (English)
-  * `submission-fa.tex`: Score and signatures page (Persian)
-  * `evaluation.tex`: Undertaking page
-  * `TASVIR-en.tex`: English cover page with green background
-  * `TASVIR-fa.tex`: Persian cover page with green background
-
-  ⚠️ Most users won't need to edit the TASVIR files.
+  * `abstract-en.tex`: Abstract in English.
+  * `abstract-fa.tex`: Abstract in Persian.
+  * `acknowledgements.tex`: A page to thank those who supported the student during the thesis work.
+  * `submission-en.tex`: Score and signatures page (English).
+  * `submission-fa.tex`: Score and signatures page (Persian).
+  * `evaluation.tex`: Undertaking page.
+  * `TASVIR-en.tex`: You should put the English cover page with green background.
+  * `TASVIR-fa.tex`: You should put the Persian cover page with green background.
 
 ### 📄 Main LaTeX Files
 
@@ -57,3 +55,5 @@ This template is organized into several directories and files as follows:
 
 * **glossaries.tex**
   Add your glossary terms here if your thesis includes a list of abbreviations or definitions.
+  
+🙏 If you found this thesis example helpful, please consider giving the repository a ⭐ to support the project.
