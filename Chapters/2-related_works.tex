@@ -1,0 +1,102 @@
+\normalfootnotes
+\titleformat{\chapter}[display]
+{\normalfont\Large\BNazboldEGT\centering}
+{\vspace*{8cm}{‎\textbf{فصل دوم} }}{5pt}{\Large}
+\chapter{\textbf{پیشینه تحقیق}}\label{sec2}
+\thispagestyle{empty}
+\newpage
+
+
+\section{نمادها}\label{sec21}
+در این قسمت از حروف بزرگ ضخیم\LTRfootnote{Bold} برای نشان دادن ماتریس استفاده می‌کنیم، مانند ماتریس $\boldmath{A}$. برای هر ماتریس $\boldmath{A} \in \mathbb{R}^{n \times m}$ نماد $\boldmath{A}_i$ به مفهوم ستون $i$-ام و $‎\boldmath{A}^{(j)}‎‎$ به معنای سطر $j$-ام  از آن ماتریس است. متغیرهای عددی
+\LTRfootnote{Scalar} با حروف کوچک به‌صورت انگلیسی مورب\LTRfootnote{Italic} (‏یعنی $i$ , $j$, $n$ و غیره) ‏نشان داده می‌شوند در حالی که بردارها\LTRfootnote{Vector} با حروف کوچک ضخیم نمایش داده می‌شوند (‏مانند $\boldmath{A}$, $\boldmath{x}$ و غیره). $\mathrm{Tr}(\boldmath{A})$ به معنای اثر\LTRfootnote{Trace} ماتریس $\boldmath{A}$ و $\boldmath{A}^\top$ به معنای ترانهاده\LTRfootnote{Transpose} آن است. نُرم فروبنیوس\LTRfootnote{Frobenius norm}  ماتریس $\boldmath{A} \in \mathbb{R}^{m\times n}$ به‌صورت $\lVert\boldmath{A}\rVert_F=\sqrt{\sum_{i=1}^{m}\sum_{j=1}^{n}A_{ij}^2}=\sqrt{\mathrm{Tr}(\boldmath{A}^\top\boldmath{A})}$ و نُرم $\ell_{2,1} $ به‌صورت $\lVert{A}\rVert_{2,1}=\sum_{i=1}^{n}\sqrt{\sum_{j=1}^{d} {{A}^2_{i,j}}}$ تعریف می‌شود، که ${A_{ij}}$ به مفهوم $(i,j)$ درایه داخلی آن ماتریس است. ماتریس داده به‌صورت $\boldmath{X} \in \mathbb{R}^{n \times d}$ تعریف می‌شود که $n$ بیانگر تعداد نمونه‌ها و $d$ تعداد ویژگی‌ها می‌باشد، همچنین ماتریس برچسب به‌صورت  $\boldmath{Y} \in \mathbb{R}^{n \times l}$ تعریف می‌شود که $l$ بیانگر تعداد برچسب‌ها می‌باشد. اگر نمونه $i$-ام برچسب $j$-ام را داشته باشد $‎{Y}_{i,j}=1‎‎‎$ در غیر این‌صورت ${Y}_{i,j}=0$.
+\section{کارهای مرتبط}\label{sec22}
+در سال‌های اخیر، پژوهش محققان بر روی روش‌های انتخاب ویژگی برای مدیریت داده‌های چندبرچسبه، که در آن هر نمونه با چندین برچسب مرتبط است، افزایش یافته است. تحقیق در مورد انتخاب ویژگی چندبرچسبه به سرعت پیشرفت کرده زیرا داده‌های چندبرچسبه بیشتری مورد استفاده قرار گرفته است. روش‌های موجود انتخاب ویژگی داده‌های چندبرچسبه عمدتاً مبتنی بر روش‌های تئوری‌اطلاعات\LTRfootnote{Information-theoretic}
+و روش‌های تعبیه‌شده\LTRfootnote{Embedded based}
+هستند. روش‌های تئوری‌اطلاعات از اطلاعات متقابل یا اطلاعات متقابل شرطی\LTRfootnote{Conditional} برای استخراج همبستگی بین هر ویژگی نامزد\LTRfootnote{Condidate feature} و هر برچسب کلاس استفاده می‌کنند. به‌عنوان مثال، رویکرد حداکثر وابستگی\LTRfootnote{Max-dependency}
+و حداقل افزونگی\LTRfootnote{Min-redundancy}
+(\lr{MDMR}) \cite{lin2015multi}، براساس افزایش وابستگی ویژگی، بین ویژگی‌ها و برچسب‌ها و کاهش افزونگی ویژگی بهترین زیر مجموعه ویژگی را بدست می‌آورد. تابع هدف ‎\lr{MDMR}‎ به‌صورت زیر می‌باشد:
+\begin{align}\label{MDMR-F}
+	J({\boldmath{f}_k}) = \sum_{\boldmath{l}_i\in {L}}^{}{I}({\boldmath{f}_k};{\boldmath{l}_i})-\frac{1}{\mid S \mid}\sum_{\boldmath{f}_j\in S}^{}\biggl\{{I}({\boldmath{f}_k};{\boldmath{f}_j}) -\sum_{\boldmath{l}_i\in {L}}^{} {I}({\boldmath{f}_k};{\boldmath{l}_i}|{\boldmath{f}_j}) \biggl\}
+\end{align}
+${\boldmath{f}_k}, {\boldmath{f}_j}$
+و$ُS$
+به ترتیب  ویژگی که انتخاب شده، ویژگی کاندید و مجموعه ویژگی‌هایی که قبلا انتخاب شده‌اند. همچنین $\textit{‎\lr{I}}({\boldmath{f}_k};{\boldmath{l}_i})$ وابستگی ویژگی‌ها می‌باشد و
+افزونگی بین ویژگی‌ها به وسیله‌ی  $ \textit{‎\lr{‎I}‎}({\boldmath{f}_k};{\boldmath{f}_j}) - \sum_{\boldmath{l}_i\in {L}}^{} \textit{‎\lr{‎I}‎}({\boldmath{f}_k};{\boldmath{l}_i}|{\boldmath{f}_j})$ اندازه‌گیری می‌شود. مشابه این کار، لی و همکاران پژوهشی را تحت عنوان ‎\lr{SCLS}‎ \cite{lee2017scls} ارائه دادند که شامل دو عبارت ارتباط ویژگی\LTRfootnote{Feature relevance}} و معیار ارتباط مقیاس‌پذیر\LTRfootnote{Scalable relevance evaluation}
+است. آنتروپی ویژگی\LTRfootnote{Feature entropy} $k$-ام توسط $H({\boldmath{f}_k})$ اندازه‌گیری می‌شود. 
+\begin{align}
+		J({\boldmath{f}_k}) =\sum_{\boldmath{l}_i\in \boldmath{L}}^{} {I({\boldmath{f}_k};{\boldmath{l}_j})} - \sum_{\boldmath{f}_j \in S}^{} \frac{I({\boldmath{f}_k};{\boldmath{f}_j})}{H({\boldmath{f}_k})}\sum_{\boldmath{l}_i \in \boldmath{L}}^{} \textit{\lr{I}}({\boldmath{f}_k};{\boldmath{l}_j})
+\end{align}
+	اخیراً‎ \lr{ LRFS}برای مسائل انتخاب ویژگی داده‌های چندبرچسبه ارائه شده است \cite{zhang2019distinguishing}. در این روش برچسب‌ها‎ به ‌دسته‌های مستقل و وابسته تقسیم می‌شوند. تابع \lr{ LRFS} به شرح فرمول\eqref{LRFS}  مطرح گردیده است. 
+	\begin{align}\label{LRFS}
+	J(\boldmath{f}_k)&=LR(\boldmath{f}_k;{L})-\frac{1}{\lvert S \lvert}\sum_{\boldmath{f}_j \in S}^{}I(\boldmath{f}_k;\boldmath{f}_j)\nonumber\\
+		&=\sum_{\boldmath{l}_i \in {L}}^{}\biggl\{{{\sum_{\boldmath{l}_i \neq \boldmath{l}_j, \boldmath{l}_j \in {L}}^{}} I(\boldmath{f}_k;\boldmath{l}_j|\boldmath{l}_i)-\frac{1}{\lvert S \lvert} \sum_{\boldmath{f}_j \in S}^{} I(\boldmath{f}_k;\boldmath{f}_j)}\biggl\}
+	\end{align}   
+	روش‌های مبتنی بر تئوری‌اطلاعات، ارتباطات متقابل مرتبه‌بالا بین ویژگی‌ها و برچسب‌ها را نادیده می‌گیرند. بنابراین اهمیت هر یک از ویژگی‌ها یا برچسب‌ها یک عامل کلیدی در تأثیرگذاری این رویکردها می‌باشد. در عوض، رویکردهای مبتنی بر انتخاب ویژگی‌ چندبرچسبه بر استفاده از همبستگی‌های برچسب تأکید می‌کنند و از همبستگی‌های برچسب برای انتخاب زیرمجموعه‌ایی از ویژگی‌های فشرده بهره می‌برند. در سال‌های اخیر، چندین روش مختلف انتخاب ویژگی مبتنی بر تعبیه خلوت\LTRfootnote{Sparse embedded-based methods}} ارائه شده است \cite{jian2016multi,NIPS2010_09c6c378,cai2013exact}. به‌عنوان یکی از روش‌های پایه، ‎\textit{نی}‎ و همکاران \cite{NIPS2010_09c6c378}،
+	انتخاب ویژگی مؤثر و مقاوم\LTRfootnote{Robust} را از طریق کمینه‌سازی نُرم‎ $\ell_{2,1} $ متصل\LTRfootnote{Joint$‎‎\ell_{2,1} $-norm minimization}‎ \lr{‎ (RFS)} معرفی کردند که‌ به‌صورت زیر فرموله می‌شود:
+	\begin{align}
+		\min_{\boldmath{W}}[\sum_{i=1}^{n}\lVert\boldmath{x}_i\boldmath{W}-\boldmath{y}_i\rVert+ \gamma \lVert\boldmath{W}\rVert_{2,1}]=\min_{\boldmath{W}}[ \lVert\boldmath{XW}-\boldmath{Y}\rVert_{2,1}+ \gamma \lVert\boldmath{W}\rVert_{2,1}]
+	\end{align}
+	که در آن $\boldmath{W} \in \mathbb{R}^{d \times c}$ ماتریس ضرایب\LTRfootnote{Coefficient matrix} است و ویژگی‌های متمایز\LTRfootnote{Discriminative feature} توسط $\lVert\boldmath{W}\rVert_{2,1}$ انتخاب می‌شود.
+	اگرچه  \lr{RFS} یک روش انتخاب ویژگی چند‌کلاسه است، اما چارچوب آن برای موارد چندبرچسبه نیز مناسب است و در روش‌های متعدد انتخاب ویژگی چندبرچسبه استفاده شده‌است. به‌عنوان مثال، زو و همکاران \cite{zhu2018multi}، مدل \lr{RFS} را برای انتخاب ویژگی چندبرچسبه در برچسب‌های گم‌شده\LTRfootnote{Missing} )‎\lr{MLMLFS}) توسعه دادند.‎‎ این روش بر اساس فرض نمونه‌های مشابه برچسب‌های مشابهی دارند، از منظم‌ساز گراف\LTRfootnote{Graph regularization} استفاده می‌کند. افزون بر‌آن، مجموعه‌‌‌ای از ویژگی‌های متمایز توسط نُرم $\ell_{2,1} $ و $p$ با محدودیت $0< p\leq1$ انتخاب می‌شوند. محققان اخیراً تلاش کرده‌اند که از جایگزین‌هایی برای ماتریس برچسب استفاده کنند به این دلیل که یادگیری مدل‌های رگرسیون چندبرچسبه روی یک ماتریس برچسب دودویی\LTRfootnote{ Binary}چالش برانگیز است. این مطالعات را می‌توان به دو روش با استفاده از ماتریس برچسب نهان یا ماتریس شبه‌برچسب به‌عنوان هدف رگرسیون طبقه‌بندی کرد. یک روش شناخته‌شده‌ و معروف که از ماتریس برچسب نهان استفاده می‌کند، انتخاب ویژگی آگاهانه داده‌های چندبرچسبه 
+	)‎\lr{MIFS}) \cite{jian2016multi} 
+	است، که از همبستگی‌های برچسب ضمنی برای انتخاب متمایزترین ویژگی‌ها بهره می‌برد. علاوه بر این، 
+	\lr{MIFS}
+	ماتریس ابعاد‎‎پایین برچسب را برای جلوگیری از رشد نمایی در تعداد کل ویژگی‌ها و برچسب‌ها درنظر می‌گیرد. تابع هدف  ‎ \lr{ MIFS}‎به شرح زیر می‌باشد :
+	\begin{align}
+		\min_{\boldmath{W} ,\boldmath{V}, \boldmath{B}}\lVert\boldmath{XW}-\boldmath{V}\rVert^2_F + \alpha\lVert\boldmath{Y}-\boldmath{V}\boldmath{B}\rVert^2_F + 
+		\beta\mathrm{Tr}(\boldmath{V}^\top \boldmath{LV}) +\gamma\lVert\boldmath{W}\lVert_{2,1}
+	\end{align}
+	\lr{$\boldmath{W}$} ماتریس ضرایب ویژگی‌ها،
+	\lr{$\boldmath{X}$} ماتریس ویژگی،
+	\lr{$\boldmath{V}$} ماتریس ضریب برچسب‌ها و
+	\lr{$\boldmath{B}$} ماتریس نهان می‌باشد.
+	%\lr{ MIFS} اطلاعات پنهان رایج را از ماتریس ویژگی و برچسب استخراج می‌کند. این مفهوم پیشگام در برخی از روش‌های پیشرفته انتخاب ویژگی چندبرچسبه توسعه یافته است. به‌عبارتی دیگر در روش \lr{MIFS}، ماتریس چندبرچسبه را به ماتریس‌های دو عاملی تجزیه می‌شود که حاوی ورودی هایی از علائم مختلط است. در نتیجه، تفسیر آنها می‌تواند چالش برانگیز باشد.
+	به‌عبارتی دیگر در روش ‎\lr{MIFS}‎، ماتریس فضای اصلی برچسب به فضای کاهش یافته انتقال داده می‌شود. این روش، پیشگام برخی از روش‌های پیشرفته انتخاب ویژگی چندبرچسبه توسعه یافته است. در این مدل، ماتریس چند‌برچسبه اصلی به دو ماتریس‌ تجزیه می‌شود که حاوی محتویاتی از علائم مختلط است. در نتیجه، تفسیر آن‌ها می‌تواند چالش‌برانگیز باشد. برایتلی و همکاران‎ \cite{braytee2017multi}، ‎\lr{ CMFS}را ارائه دادند. در این روش، انتخاب ویژگی چندبرچسبه با استفاده از ماتریس تجزیه سه‌گانه\LTRfootnote{Joint tri-factorization} انجام می‌شود. با استفاده از ماتریس تجزیه سه‌گانه و حفظ ساختارمحلی داده‌ها، ماتریس‌های ویژگی و برچسب به یک فضای کم‌بُعد نگاشت\LTRfootnote {Mapping} می‌شود و با افزایش روابط بین این دو ماتریس در فضای کم‌بُعد، نسبت به انتخاب ویژگی اقدام می‌کند. تابع هزینه این روش به‌صورت زیر است:
+		\begin{align}
+		\min_{\boldmath{V} ,\boldmath{L},\boldmath{Q},\boldmath{P},\boldmath{B}}&\lVert\boldmath{X}-\boldmath{VLQ}\rVert^2_F + \alpha\lVert\boldmath{Y}-\boldmath{V}\boldmath{P}\boldmath{B}\rVert^2_F + 
+		\beta\lVert\boldmath{L}-\boldmath{P}\rVert^2_F \nonumber\\
+		& +\epsilon\mathrm{Tr}(\boldmath{R}(\boldmath{VPB})^\top \boldmath{VPB})  +\gamma\lVert{\boldmath{Q}}\lVert_{2,1},\nonumber\\
+		&{\text{\lr{s.t. }}}{\boldmath{V},\boldmath{L},\boldmath{Q},\boldmath{P},\boldmath{B}}\geq 0
+	\end{align}
+	انتخاب ویژگی با استفاده از فضای مشترک ‎\lr{(SCMFS)} \cite{hu2020multi}، یکی دیگر از روش‌های توسعه ‎\lr{MIFS}‎ است. در ‎\lr{SCMFS} یک فضای مشترک از ماتریس ویژگی و ماتریس برچسب استخراج می‌شود و برای انتخاب ویژگی استفاده می‌گردد. همچنین از روش تجزیه ماتریس نامنفی برای افزایش تفسیرپذیری در فرایند انتخاب ویژگی استفاده شده است. در نهایت با اعمال یک رمزگشا\LTRfootnote{ِDecoder} بر روی ماتریس ویژگی و کمینه‌سازی خطا در عبارت رگرسیون، ویژگی‌های بهینه انتخاب می‌شوند. این روش به‌صورت فرمول\eqref{SCMFS} پیشنهاد شده است.
+	\begin{align}\label{SCMFS}
+		\min_{\boldmath{V} ,\boldmath{B},\boldmath{W}}&\lVert\boldmath{XW}-\boldmath{V}\rVert^2_F + \alpha\lVert\boldmath{X}-\boldmath{V}\boldmath{Q}\rVert^2_F + 
+		\beta\lVert\boldmath{Y}-\boldmath{V}\boldmath{B}\rVert^2_F +\gamma\lVert\boldmath{W}\lVert_{2,1},\nonumber\\&
+		\;{\text{\lr{s.t. }}\;}{\boldmath{W},\boldmath{V},\boldmath{Q},\boldmath{B}}\geq 0
+	\end{align}  
+	اخیراً گائو و همکاران \cite{gao2021multilabel}، مانند ‎\lr{MIFS}، انتخاب ویژگی چندبرچسبه با استفاده از ساختار به اشتراک گذاشته\LTRfootnote{Shared structure} را ارائه دادند، با این تفاوت که عبارت رگرسیون (رمزگذار\LTRfootnote{ِEncoder} ) در \lr{MIFS}‎‎ به یک عبارت تجزیه (رمزگشا) تغییر یافت. فرمول این مقاله مانند ‎\lr{SCMFS}‎ بر اساس مدل‎ 
+	\lr{NMF}
+	.‎می‌باشد
+	\begin{align}
+		\min_{\boldmath{V},\boldmath{Q},\boldmath{M}}&\lVert\boldmath{X}-\boldmath{V}\boldmath{Q}^\top\rVert^2_F + \alpha \lVert\boldmath{Y}-\boldmath{V}\boldmath{M}\rVert^2_F +\beta\mathrm{Tr}(\boldmath{V}^\top \boldmath{LV}) + \gamma\lVert\boldmath{Q}\lVert_{2,1},\nonumber\\&
+		{\text{\lr{s.t. }}}{\boldmath{V},\boldmath{M},\boldmath{Q}}\geq 0
+	\end{align}
+	روش‌های مبتنی بر شبه‌برچسب‌های\LTRfootnote{Pseudo-labels} مختلفی در کاربردهای ‎\lr{MLFS}‎ وجود دارد که با روش‌های مختلف، بین ماتریس برچسب و جایگزین‌های آن ارتباط برقرار می‌کند. به عنوان مثال، هوانگ و همکاران \cite{huang2021multi}، یک روش ‎\lr{MLFS}‎ با منظم‌ساز خمینه و حداکثرسازی وابستگی 
+	(\lr{MRDM}) 
+	پیشنهاد کردند. این روش فضای برچسب را از طریق منظم‌سازی خمینه به یک فضای جایگزین تعبیه می‌کند. علاوه بر این، از معیار استقلال هیلبرت اشمیت\LTRfootnote{Hilbert–Schmidt Independence Criterion} 
+	(\lr{HSIC}) 
+	به عنوان یک منظم‌ساز برای به حداکثر رساندن وابستگی بین خمینه تعبیه و ماتریس برچسب استفاده می‌کند.
+	\begin{align}
+		\min_{\boldmath{W},\boldmath{Z}^\top\boldmath{Z}={\boldmath{I}}}\lVert{\boldmath{XW}-\boldmath{Z}}\lVert^2_F + \alpha\mathrm{Tr}(\boldmath{Z}^\top \boldmath{LZ}) - \beta\mathrm{Tr}(\boldmath{HZ}\boldmath{Z}^\top \boldmath{HY}\boldmath{Y}^\top)+ \gamma\lVert{\boldmath{W}}\lVert_{2,1}
+	\end{align}
+	فن و همکاران\cite{fan2021manifold}، یک چارچوب دوگانه خمینه را پیشنهاد کردند که ماتریس ویژگی را به دو ماتریس نهان (خوشه‌بندی و برچسب) تعبیه می‌کند. همچنین از یک منظم‌ساز برای افزایش رابطه‌ی بین خمینه‌ی تعبیه و فضای برچسب استفاده می‌کند. همبستگی ضمنی بین برچسب‌ها توسط اطلاعات ساختار سراسری و محلی بهره‌برداری می‌شود.
+	\begin{align}
+		\min_{\boldmath{W} , \boldmath{V}, \boldmath{F},\boldmath{Q}}&\lVert \boldmath{X}^\top\boldmath{W} - \boldmath{V} \rVert_{2,1} +\gamma\mathrm{Tr}(\boldmath{F}^\top\boldmath{XLX}^\top\boldmath{F}) + \beta \lVert\boldmath{W}-\boldmath{FQ}\lVert^2_F \nonumber\\
+		&+\lambda(\mathrm{Tr}[(\boldmath{V}-\boldmath{Y})^\top \boldmath{E}(\boldmath{V}-\boldmath{Y})] +\mathrm{Tr}(\boldmath{V}^\top \boldmath{LV})) + \alpha \lVert\boldmath{W}\lVert_{2,1},\nonumber\\
+		&{\text{\lr{s.t.}}\quad}\boldmath{V}\geq 0, \boldmath{W}^\top \boldmath{W}=\boldmath{I},  \boldmath{F}^\top \boldmath{F}=\boldmath{I}
+	\end{align}
+	به‌طور مشابه در \cite{fan2021multi}، یک مدل مقاوم با ترکیب انتخاب ویژگی چندبرچسبه با مدل تفکیک کننده‌ی محلی\LTRfootnote{Local discriminant model} ارائه شده است.
+	در این روش با استفاده از اطلاعات مدل تفکیک کننده، نمونه‌ها خوشه‌بندی می‌شوند و همبستگی ضمنی بین برچسب‌ها نیز استخراج می‌شود.
+	\begin{align}
+		\min_{{\boldmath{W}} , {\boldmath{b}}, {\boldmath{L}}, {\boldmath{P}}}&\lVert{\boldmath{XW}}+{\boldmath{1}}_n {\boldmath{b}}^\top - {\boldmath{Y}}\rVert_{2,1} + \alpha \lVert{\boldmath{W}}-{\boldmath{LP}}\lVert^2_F + \beta\mathrm{Tr}({\boldmath{L}}^\top {\boldmath{M}}{\boldmath{L}}) +\gamma\lVert{\boldmath{W}}\lVert_{2,1},  \nonumber\\
+		&\quad{\text{\lr{s.t.}}\quad}{\boldmath{L}}^\top {\boldmath{L}}={\boldmath{I}}
+	\end{align}
+ ژانگ و همکاران\cite{zhang2022non}، یک روشی به نام ‎\lr{NMDG}‎ یا انتخاب ویژگی چندبرچسبه ‌نامنفی با قید گراف پویا\LTRfootnote{ِDynamic graph constraints }
+	} ارائه کردند. در این روش، یک ماتریس شبه‌برچسب با استفاده از منظم‌ساز خمینه‌‎ برچسب و رگرسیون خطی آموزش داده می‌شود، سپس با ادغام خمینه‌ ویژگی‌ها و ماتریس شبه‌برچسب، ماتریس گراف پویای لاپلاسین\LTRfootnote{Laplacian} ایجاد می‌شود، که برای یادگیری وزن‌های ماتریس ویژگی\LTRfootnote{Learning of feature weight matrix} استفاده می‌شود.
+	\begin{align}
+		\min_{\boldmath{W} , \boldmath{b}, \boldmath{F}}&\lVert\boldmath{XW}+\boldmath{1}_n \boldmath{b}^\top - \boldmath{F}\rVert^2_F + \alpha\mathrm{Tr}( \boldmath{F}^\top \boldmath{L}_{\boldmath{Y}} \boldmath{F}) +\beta \mathrm{Tr}( \boldmath{WL}_{\boldmath{F}^\top} \boldmath{W}^\top) \nonumber\\
+		&+\gamma \mathrm{Tr}(\boldmath{W}^\top \boldmath{L}_{\boldmath{X}^\top} \boldmath{W}),{\text{\lr{s.t.}}}({\boldmath{W},\boldmath{F}})\geq 0.
+	\end{align}
+	
+	علاوه بر روش‌های انتخاب ویژگی چندبرچسبه ذکر شده، روش‌های یادگیری چندبرچسبه خاصی وجود دارند که همبستگی‌های برچسب مرتبه‌بالا را بررسی می‌کنند. به‌عنوان یک کار پیشگام، ژو و همکاران\cite{zhu2017multi}، یک روش یادگیری چندبرچسبه‎\lr{GLOCAL }‎ را ارائه کردند که همزمان برچسب‌های گم‌شده را بازیابی\LTRfootnote{Retrive} می‌کند،	طبقه‌بند را آموزش می‌دهد و از همبستگی‌های سراسری و محلی برچسب همراه بهینه‌سازی خمینه‌ برچسب و یادگیری یک بازنمایی‌\LTRfootnote{Representation} برچسب نهان استفاده می‌کند. ژائو و همکاران\cite{zhao2022learning}، روش یادگیری چندبرچسبه به نام ‎\lr{LSGL}‎ را معرفی کردند، که با در‌نظر گرفتن سازگاری سراسری و همواری\LTRfootnote{Smoothness} محلی برچسب‌ها، یک ماتریس همبستگی برچسب را می‌آموزد. \lr{LSGL}‎ تلاش می‌کند تا همبستگی برچسب را از دیدگاه‌های سراسری و محلی در یک مدل خودبازنمایی\LTRfootnote{Self-representation} و یک چارچوب ساختار داده محلی استخراج کند. ‎کومار‎ و همکاران\cite{kumar2022low}، تبدیل زیرفضای برچسب رتبه‌پایین\LTRfootnote{Low-rank} برای یادگیری چند‌برچسبه با برچسب‌های گم‌شده ‎\lr{LRMML}‎ را ارائه کردند. این چارچوب، همبستگی سراسری برچسب‌ها را با یک مدل خود‌بازنمایی استخراج می‌کند و برای بازیابی برچسب‌های گم‌شده از فضای ماتریس رتبه‌پایین برچسب به همراه آموزش طبقه‌بند استفاده می‌کند.
