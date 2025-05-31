@@ -71,4 +71,7 @@ Contains structured front matter and official university pages:
 
 ➤ compile using **XeLaTeX**.
 
+---
+📄 **The final PDF file `Mohammad-Lib-Approval.pdf` has been approved by the University of Kurdistan's library and fully complies with the thesis formatting requirements.**
+
 🙏 **If you found this thesis example helpful, please consider giving the repository a ⭐ to support the project.**
