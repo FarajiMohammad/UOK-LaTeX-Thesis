@@ -31,6 +31,8 @@ Includes the main body content of your thesis, organized by topic:
 ```latex
 \include{chapters/pre-intro}
 ```
+### 📁 **Fonts**
+Font required to run the Latex file. To install the fonts, select all the fonts, right-click, and then select the "Install for all users" option.
 
 ### 📁 **Figures**
 
