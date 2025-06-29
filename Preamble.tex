@@ -51,12 +51,15 @@
 \usepackage{caption}
 \usepackage{booktabs}
 
+\newcounter{subfigcounter} % Define a counter
+\AtBeginEnvironment{figure}{\setcounter{subfigcounter}{0}}
 \newcommand{\mysubfig}[2]{%
-	\begin{minipage}[b]{0.3\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{#1}
-		\caption*{\centering #2}
-	\end{minipage}\hfill
+  \stepcounter{subfigcounter}% Increment counter
+  \begin{minipage}[b]{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{#1}
+    \caption*{(\alph{subfigcounter})\ #2}
+  \end{minipage}\hfill
 }
 \usepackage[extrafootnotefeatures]{xepersian}
 \usepackage[perpagefootnote=on]{xepersian}
