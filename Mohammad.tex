@@ -1,0 +1,91 @@
+%  PLEASE DO NOT REMOVE OR CHANGE THIS BLOCK
+%  ===========================================================
+%
+%  A LaTeX Template for Typesetting Theses in Persian
+%  By: Mohammad Faraji
+%  ===========================================================
+%%%% تست شده با تکلایو 2025 
+\documentclass[fleqn,a4paper, 12pt, oneside]{report}
+
+\input{Preamble.tex}
+\input{MyGlossy.tex}
+\begin{document}
+	
+	\include{STR-Files/TSVIR-FA}
+	
+	\include{STR-Files/cover-fa}
+	%% evaluation page...
+	\include{STR-Files/evaluation}
+	%
+	
+	%% submission page...
+	\include{STR-Files/submission-fa}
+	%% acknowledgements page...
+	\include{STR-Files/acknowledgements}
+	%
+	%% alphabetic page numbering for non-report pages...
+	
+	\newpage
+	%% the abstract page...
+	\include{STR-Files/abstract-fa}
+	
+	% table of content...
+	\pagenumbering{alph}
+	\addtocontents{toc}{\textbf{عنوان}~\hfill\textbf{صفحه}\vspace*{0.3cm}\par\hrule height 1pt\vskip 1.4pt\hrule height 1pt\par}
+	\addtocontents{lof}{\textbf{عنوان}~\hfill\textbf{صفحه}\vspace*{0.3cm}\par\hrule height 1pt\vskip 1.4pt\hrule height 1pt\par}
+	\addtocontents{lot}{\textbf{عنوان}~\hfill\textbf{صفحه}\vspace*{0.3cm}\par\hrule height 1pt\vskip 1.4pt\hrule height 1pt\par}
+	\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\large\bfseries\underline}
+	\renewcommand{\cftaftertoctitle}{\hspace*{\fill}\vspace*{-1.8cm}}
+	\renewcommand{\cftlottitlefont}{\hspace*{\fill}\large\bfseries\underline}
+	\renewcommand{\cftafterlottitle}{\hspace*{\fill}\vspace*{-1.8cm}}
+	\renewcommand{\cftloftitlefont}{\hspace*{\fill}\large\bfseries\underline}
+	\renewcommand{\cftafterloftitle}{\hspace*{\fill}\vspace*{-1.8cm}}
+	\vspace*{-2.5cm}
+	\tableofcontents
+	% group the list of figures, list of tables and table of contents in one page...
+	\begingroup
+	\let\clearpage\relax
+	\newpage
+	% list of figures...
+	\vspace*{-2.5cm}
+	\listoffigures
+	\newpage
+	% list of tables...
+	\vspace*{-2.5cm}
+	\listoftables
+	\endgroup
+% درصورت نیاز به پیش تعریف، دستور زیر را فعال نمایید.
+	%\include{Chapters/1-pre-intr}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{Chapters/1-introduction}
+	\include{Chapters/2-related_works}
+	\include{Chapters/3-proposed_method}
+	\include{Chapters/4-Experimental}
+	\include{Chapters/5-conclusion}
+	\include{Chapters/6-Attachment}
+	\settextfont{XB Niloofar}
+% برای دانشجویانی که میخوان در پایان‌نامه خود از واژه نامه استفاده کنند دستورهای زیر را فعال نمایند.
+%	\printglossary
+%	\printabbreviation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{Chapters/7-references}
+	
+	% appendixes section...
+	% برای دانشجویانی که از پایان‌نامه یا رساله خود مقاله استخراج کردن لطفا دستور زیر را فعال کنید و اطلاعات ان را در صفحه ی مربوطه وارد بفرمایند.
+%	\include{Chapters/Dastavard}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{latin}
+		% english abstract page...
+		\newpage
+		\input{STR-Files/abstract-en.tex}
+		\newpage
+		% english cover page...
+		\input{STR-Files/Submission-en.tex}
+		\input{STR-Files/cover-en.tex}
+	\end{latin}	
+	\newpage
+	\input{STR-Files/TASVIR-En}
+	
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
