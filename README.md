@@ -1,7 +1,7 @@
 # UOK-LaTeX-Thesis
 
 A XeLaTeX-based thesis prepared according to the official formatting guidelines of the University of Kurdistan (UOK). This repository provides a complete and approved sample thesis that other students can reference to structure and format their own work correctly.
-
+نمومنه پایان‌نامه لاتک دانشگاه کردستان
 ---
 
 ## 📁 LaTeX File Structure
